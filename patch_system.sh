@@ -31,7 +31,7 @@ patch_file() {
 
     echo ">> Buscando ubicaciones de $filename..."
 
-    matches=$(sudo find / -type f -iname "$filename" 2>/dev/null)
+    matches=$(sudo find /var/lib -type f -iname "$filename" 2>/dev/null)
 
     if [ -z "$matches" ]; then
         echo "⚠️ No se encontró ninguna instancia de $filename en el sistema."
